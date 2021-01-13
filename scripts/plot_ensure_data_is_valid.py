@@ -38,12 +38,6 @@ def ensure_valid_data_and_produce_plots():
         implementation_run_times[IMPL_NETWORKX] = []
         implementation_run_times[IMPL_JAVA] = []
 
-        # Add graph loading times manually as they are not part of the expected json.
-        implementation_run_times[IMPL_PYTHON].append(
-            results_python[tested_graph_file][KEY_TEST_TYPE_LOAD][KEY_RUN_TIME])
-        implementation_run_times[IMPL_JAVA].append(results_java[tested_graph_file][KEY_TEST_TYPE_LOAD][KEY_RUN_TIME])
-        implementation_run_times[IMPL_NETWORKX].append(
-            results_networkx[tested_graph_file][KEY_TEST_TYPE_LOAD][KEY_RUN_TIME])
 
         # Iterate over test type and ensure validity and produce a plot for the specific graph.
         for test_type, test_info in tests.items():
@@ -64,6 +58,15 @@ def ensure_valid_data_and_produce_plots():
                 assert results_java[tested_graph_file][test_type][KEY_RESULT] == \
                        results_python[tested_graph_file][test_type][KEY_RESULT]
                 implementation_run_times[IMPL_NETWORKX].append(0)
+
+
+
+        # Add graph loading times manually as they are not part of the expected json.
+        implementation_run_times[IMPL_PYTHON].append(
+            results_python[tested_graph_file][KEY_TEST_TYPE_LOAD][KEY_RUN_TIME])
+        implementation_run_times[IMPL_JAVA].append(results_java[tested_graph_file][KEY_TEST_TYPE_LOAD][KEY_RUN_TIME])
+        implementation_run_times[IMPL_NETWORKX].append(
+            results_networkx[tested_graph_file][KEY_TEST_TYPE_LOAD][KEY_RUN_TIME])
 
         produce_plot(tested_graph_file + '.png', tested_graph_file + " - Lower is better", algos_tests,
                      implementation_run_times)
