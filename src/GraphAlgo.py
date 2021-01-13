@@ -174,8 +174,9 @@ class GraphAlgo(GraphAlgoInterface):
         Notes:
         If the graph is None or id1 is not in the graph, the function should return an empty list []
         """
-
+        self.__set_all_nodes_unvisited()
         res = self.__tarjan(self.get_graph().get_all_v().get(id1))
+
         for scc in res:
             if id1 in scc:
                 return scc
