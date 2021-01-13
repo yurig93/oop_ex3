@@ -21,7 +21,7 @@ def check():
     """
     check0()
     check1()
-    check2()
+    check2_mixed_positions()
 
 
 def check0():
@@ -63,7 +63,7 @@ def check1():
     g_algo.plot_graph()
 
 
-def check2():
+def check2_mixed_positions():
     """ This function tests the naming, basic testing over A5 json file.
       :return:
       """
@@ -87,7 +87,7 @@ def check2():
     g_algo.get_graph().add_node(222)
     g_algo.get_graph().add_node(333)
 
-    g_algo.get_graph().add_edge(111, 222,1 )
+    g_algo.get_graph().add_edge(111, 222, 1)
     g_algo.get_graph().add_edge(222, 333, 1)
     g_algo.get_graph().add_edge(333, 111, 1)
     g_algo.get_graph().add_edge(333, 3, 1)

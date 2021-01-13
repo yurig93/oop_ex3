@@ -189,8 +189,9 @@ class GraphAlgo(GraphAlgoInterface):
         Notes:
         If the graph is None the function should return an empty list []
         """
-        res = self.__tarjan()
         self.__set_all_nodes_unvisited()
+        res = self.__tarjan()
+        # res.reverse()
         return res
 
     def __set_all_nodes_unvisited(self):
@@ -272,8 +273,10 @@ class GraphAlgo(GraphAlgoInterface):
         initial_world_range = self.__get_current_world_range()
         spiral_scc_factor = 1
 
-        for scc in self.connected_components():
+        sccs = self.connected_components()
+        self.__set_all_nodes_unvisited()
 
+        for scc in sccs:
             starting_location: GeoLocation = initial_world_range.from_ratio(
                 GeoLocation(self.__MULTIPLIER_DIST_X * spiral_scc_factor, 0, 0))
 
