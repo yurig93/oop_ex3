@@ -39,6 +39,8 @@ class TestDiGraph(TestCase):
         self.assertEqual(2, len(data.get('nodes')))
         self.assertEqual(4, data.get('links').get(1).get(2).get('weight'))
 
+        # Node and Edge data integrity are checked in the appropriate test modules.
+
     def test_v_size(self):
         g = DiGraph()
         g.add_node(1, (1, 2, 3))
