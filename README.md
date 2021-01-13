@@ -1,5 +1,15 @@
 # OOP Ex3
 
+- [OOP Ex3](#oop-ex3)
+    * [What does this repo contain?](#what-does-this-repo-contain-)
+        + [Requirements](#requirements)
+        + [Usage](#usage)
+    * [Features](#features)
+        + [Graph features](#graph-features)
+        + [Visual features](#visual-features)
+    * [Performance](#performance)
+    
+
 ## What does this repo contain?
 This repo contains an implementation of a directed weighted graph in Python. 
 A couple of path finding and grouping algorithms were implemented and compared to the [NetworkX](https://github.com/networkx) library and our [previous Java implementation](https://github.com/yurig93/oop_ex2).
