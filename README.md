@@ -20,7 +20,7 @@ A couple of path finding and grouping algorithms were implemented and compared t
 
 ### Usage
 First clone this repo. Then run the tests to make sure all is working fine. 
-After that you should be able to import the implement classes from the src folder.
+After that you should be able to import the implemented classes from the src folder.
 ```sh
 # git clone this repository
 $ git clone https://github.com/yurig93/oop_ex3.git
@@ -94,7 +94,7 @@ More examples can be found in the at `tests/`, `src/GraphAlgoInterface.py` and `
 
 
 ### Visual features
-The implementation visualizes the graph on the screen. It supports fixated (x,y) coordinates and NULL coordinates. It will will first draw on screen any node with a known position.
+The implementation visualizes the graph on the screen. It supports fixated (x,y) coordinates and NULL coordinates. It will first draw on screen any node with a known position.
 Then the world boundaries will be determined for further ratio calculations. 
 
 Each strongly connected component (SCC) with a node that does not have a `GeoLocation` will be assigned a new position for the designated place for the SCC on the map.
