@@ -43,7 +43,7 @@ $ cd tests && PYTHONPATH="$(pwd):$(pwd)/../src/:$(pwd)/../:$PYTHONPATH" python -
 ### Graph features
 This repo contains an implementation for a directed weighted graph under `src/`.
 It also contains a set of graph algorithms to be used found in the `GraphAlgo` class.
-More examples can be found in the at `tests/`, `src/GraphAlgoInterface.py` and `src/GraphInterface.py`
+More examples can be found at `tests/`, `src/GraphAlgoInterface.py` and `src/GraphInterface.py`
 - Build a graph with nodes and edges using a simple API
     ```python
     from DiGraph import DiGraph
