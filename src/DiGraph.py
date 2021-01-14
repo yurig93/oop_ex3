@@ -135,6 +135,7 @@ class DiGraph(GraphInterface):
         self.__nodes[node.key] = node
         node.set_links_dict(self.__links.get(node.key))
 
+
     def __add_edge_by_instance(self, edge: Edge):
         self.add_edge(edge.src, edge.dest, edge.weight)
         self.__links.get(edge.src).get(LinkAttributes.ATTR_LINKS_OUT)[edge.dest] = edge
@@ -179,6 +180,7 @@ class DiGraph(GraphInterface):
 
             del self.__links[node_id]
             del self.__nodes[node_id]
+            self.__mode_count += 1
             return True
         return False
 
